@@ -1,0 +1,39 @@
+.faqs
+{
+    padding: 50px 0 100px;
+
+
+    &__title
+    {
+        text-align: center;
+
+        margin: 0 0 80px;
+    }
+
+
+    &__item
+    {
+        margin: 0 0 50px;
+    }
+
+
+    &__item-title
+    {
+        font-size: 18px;
+
+        display: inline-block;
+
+        margin: 0 0 15px;
+
+        transition-property: color;
+        transition-timing-function: ease;
+        transition-duration: 300ms;
+
+        &:hover
+        {
+            text-decoration: none;
+
+            color: $accent;
+        }
+    }
+}

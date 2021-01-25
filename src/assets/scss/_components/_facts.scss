@@ -1,0 +1,45 @@
+.facts
+{
+    font-weight: 600;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 100px 0;
+
+    color: $text-color-dark;
+    background-position: center;
+    background-size: cover;
+
+    &::before
+    {
+        content: '';
+
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background: $cover-color;
+
+        opacity: .6;
+    }
+
+
+    &__item-count
+    {
+        font-size: 60px;
+    }
+
+
+    @include media-breakpoint-down(md)
+    {
+        &__item
+        {
+            margin: 0 0 30px;
+        }
+    }
+}

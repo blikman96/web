@@ -1,0 +1,157 @@
+.header
+{
+    position: relative;
+
+    z-index: 100;
+
+
+    &__wrapper
+    {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    &_scrolled &__wrapper
+    {
+        background-color: $header-background-color;
+    }
+
+
+    &__navigation
+    {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 34px 0;
+
+        transition-property: padding;
+        transition-timing-function: ease;
+        transition-duration: 300ms;
+    }
+
+    &_scrolled &__navigation
+    {
+        padding: 14px 0;
+    }
+
+
+    &__navigation-list
+    {
+        list-style: none;
+
+        display: flex;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    &__navigation-item
+    {
+        margin: 0 0 0 30px;
+    }
+
+    &__navigation-link
+    {
+        font-size: 16px;
+
+        color: $text-color-dark;
+
+        transition-property: color;
+        transition-timing-function: ease;
+        transition-duration: 300ms;
+
+        &:hover
+        {
+            text-decoration: none;
+
+            color: $accent;
+        }
+    }
+
+    &__navigation-header__navigation-close
+    {
+        display: none;
+    }
+
+    &__navigation-button
+    {
+        font-size: 30px;
+
+        display: none;
+
+        color: $text-color-dark;
+        background: transparent;
+    }
+
+
+    @include media-breakpoint-down(md)
+    {
+        &__navigation-list
+        {
+            display: none;
+
+            padding: 82px 0;
+        }
+
+        &__navigation-item
+        {
+            margin: 0;
+        }
+
+        &__navigation-link
+        {
+            display: block;
+
+            padding: 10px 30px;
+        }
+
+        &__navigation-item + &__navigation-item
+        {
+            border-top: 1px solid $background-color;
+        }
+
+        &__navigation-list_mobile-active
+        {
+            position: fixed;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            display: block;
+
+            background: $secondary;
+        }
+
+        &__navigation-close
+        {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            left: 0;
+
+            display: block;
+
+            padding: 34px 0 0;
+        }
+
+
+        &__navigation-button
+        {
+            display: inline-block;
+        }
+
+
+        &__navigation-button_close
+        {
+            float: right;
+        }
+    }
+}

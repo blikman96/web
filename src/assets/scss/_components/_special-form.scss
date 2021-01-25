@@ -1,0 +1,52 @@
+.special-form
+{
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 10em;
+
+    &__input
+    {
+        flex-grow: 1;
+
+        height: inherit;
+
+        padding: 0 25px;
+
+        color: $text-color;
+        background: $background-color;
+    }
+
+    &__button
+    {
+        font-size: 25px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 80px;
+
+        color: $text-color-dark;
+        background: $accent;
+
+        transition-property: background;
+        transition-timing-function: ease;
+        transition-duration: 300ms;
+    }
+
+    &__button:hover,
+    &__button:focus
+    {
+        background: $secondary;
+    }
+
+    &_footer &__button:hover,
+    &_footer &__button:focus
+    {
+        color: $secondary;
+        background: $background-color;
+    }
+}

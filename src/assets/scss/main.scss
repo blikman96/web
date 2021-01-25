@@ -1,0 +1,24 @@
+@import '_config';
+
+@import '_components/header';
+@import '_components/special-form';
+@import '_components/top-slider';
+@import '_components/features';
+@import '_components/trust';
+@import '_components/facts';
+@import '_components/courses';
+@import '_components/about';
+@import '_components/reviews';
+@import '_components/blog';
+@import '_components/faqs';
+@import '_components/footer';
+
+@import '_components/text-page';
+
+
+.wrapper_blocked
+{
+    overflow: hidden;
+
+    height: 100vh;
+}

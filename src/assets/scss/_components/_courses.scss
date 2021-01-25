@@ -1,0 +1,142 @@
+.courses
+{
+    padding: 100px 0 50px;
+
+
+    &__title
+    {
+        text-align: center;
+
+        margin: 0 0 80px;
+    }
+
+
+    &__item
+    {
+        overflow: hidden;
+
+        border-radius: 10px;
+
+        box-shadow: 0 7px 7px $shadow-color;
+    }
+
+
+    &__item-header
+    {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    &__item-image
+    {
+        display: block;
+
+        object-fit: cover;
+        width: 100%;
+        height: 290px;
+
+        object-position: center;
+    }
+
+
+    &__item-main
+    {
+        padding: 30px;
+    }
+
+
+    &__item-title
+    {
+        font-size: 18px;
+
+        display: inline-block;
+
+        margin: 0 0 15px;
+
+        transition-property: color;
+        transition-timing-function: ease;
+        transition-duration: 300ms;
+
+        &:hover
+        {
+            text-decoration: none;
+
+            color: $accent;
+        }
+    }
+
+
+    &__item-content
+    {
+        margin: 0 0 8px;
+    }
+
+
+    &__item-footer
+    {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &__item-subscription
+    {
+        line-height: 1;
+
+        display: flex;
+
+        align-items: center;
+
+        height: 40px;
+
+        padding: 0 18px;
+        border-radius: 20px;
+
+        color: $accent;
+        background: $accent-light;
+
+        transition-property: color, background-color;
+        transition-timing-function: ease;
+        transition-duration: 300ms;
+
+        &:hover
+        {
+            color: $text-color-dark;
+            background: $secondary;
+        }
+    }
+
+
+    &__item-price
+    {
+        font-size: 22px;
+        font-weight: 600;
+
+        color: $accent;
+    }
+
+
+    @include media-breakpoint-down(lg)
+    {
+        &__item-price
+        {
+            font-size: 18px;
+        }
+    }
+
+
+    @include media-breakpoint-down(md)
+    {
+        padding: 70px 0 0;
+
+        &__item
+        {
+            margin: 0 0 30px;
+        }
+    }
+}
